@@ -14,6 +14,7 @@ import {
 import { FadeIn, PopIn } from "@/components/animated";
 import { ButtonLink } from "@/components/button";
 import { CalculatorTabs } from "@/components/calculators";
+import { FilerComparisonSection } from "@/components/filer-comparison";
 import { SalaryTaxCalculatorSection } from "@/components/salary-tax-calculator";
 import {
   benefits,
@@ -127,6 +128,7 @@ export default function HomePage() {
       </section>
 
       <SalaryTaxCalculatorSection />
+      <FilerComparisonSection />
 
       <Section
         eyebrow="Why choose us"
