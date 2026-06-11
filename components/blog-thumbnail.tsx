@@ -200,7 +200,7 @@ export function BlogThumbnail({ article, large = false }: { article: BlogArticle
         </text>
 
         <foreignObject x="26" y="66" width="238" height="112">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ color: "white", fontFamily: "Inter, Arial, sans-serif" }}>
+          <div style={{ color: "white", fontFamily: "Inter, Arial, sans-serif" }}>
             <div style={{ fontSize: large ? 12 : 11, fontWeight: 900, letterSpacing: 1.4, opacity: 0.78, textTransform: "uppercase" }}>
               {theme.kicker}
             </div>
@@ -213,19 +213,19 @@ export function BlogThumbnail({ article, large = false }: { article: BlogArticle
         <g filter={`url(#${gradientId}-shadow)`}>
           <rect x="278" y="58" width="92" height="92" rx="20" fill="white" fillOpacity="0.96" />
           <foreignObject x="298" y="78" width="52" height="52">
-            <div xmlns="http://www.w3.org/1999/xhtml" style={{ color: "#0A8F4D" }}>
+            <div style={{ color: "#0A8F4D" }}>
               <PrimaryIcon size={52} strokeWidth={1.8} />
             </div>
           </foreignObject>
           <rect x="238" y="148" width="58" height="58" rx="16" fill="white" fillOpacity="0.18" />
           <foreignObject x="253" y="163" width="28" height="28">
-            <div xmlns="http://www.w3.org/1999/xhtml" style={{ color: "white" }}>
+            <div style={{ color: "white" }}>
               <SecondaryIcon size={28} strokeWidth={2} />
             </div>
           </foreignObject>
           <rect x="318" y="164" width="54" height="54" rx="15" fill="white" fillOpacity="0.18" />
           <foreignObject x="332" y="178" width="26" height="26">
-            <div xmlns="http://www.w3.org/1999/xhtml" style={{ color: "white" }}>
+            <div style={{ color: "white" }}>
               <TertiaryIcon size={26} strokeWidth={2} />
             </div>
           </foreignObject>

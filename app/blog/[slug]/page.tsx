@@ -8,7 +8,7 @@ import { contact } from "@/components/site-data";
 import { blogArticles, getArticleBySlug, getRelatedArticles } from "@/components/blog-data";
 
 type PageProps = {
-  params: any;
+  params: { slug: string };
 };
 
 const practicalGuidance = [
@@ -36,14 +36,8 @@ export function generateStaticParams() {
   }));
 }
 
-async function getSlug(params: PageProps["params"]) {
-  const resolvedParams = await Promise.resolve(params);
-  return resolvedParams.slug;
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const slug = await getSlug(params);
-  const article = getArticleBySlug(slug);
+export function generateMetadata({ params }: PageProps): Metadata {
+  const article = getArticleBySlug(params.slug);
 
   if (!article) {
     return {};
@@ -66,9 +60,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function BlogArticlePage({ params }: PageProps) {
-  const slug = await getSlug(params);
-  const article = getArticleBySlug(slug);
+export default function BlogArticlePage({ params }: PageProps) {
+  const article = getArticleBySlug(params.slug);
 
   if (!article) {
     notFound();

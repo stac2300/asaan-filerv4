@@ -36,7 +36,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Section title="What's Included">
+      <Section title="What Is Included">
         <div className="grid gap-5 md:grid-cols-2">
           {["NTN Registration assistance", "Income Tax Return Filing assistance", "Document checklist guidance", "Step-by-step support"].map((item) => (
             <div key={item} className="flex items-center gap-3 rounded-lg border border-emerald-900/10 bg-white p-5 shadow-card">
